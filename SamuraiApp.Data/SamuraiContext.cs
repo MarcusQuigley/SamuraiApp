@@ -1,14 +1,15 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SamuraiApp.Domain;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace SamuraiApp.Data
 {
-   public class SamuraiContext: DbContext
+    public class SamuraiContext :DbContext
     {
-        readonly string _connectionString = "Server = (localdb)\\mssqllocaldb; Database=SamuraiAppData;Trusted_Connection = True;";
+        readonly string _connectionString = "Server=DESKTOP-EJI49CF; Database=SamuraiAppData;Trusted_Connection =True;";
+        // "Server = (localdb)\\mssqllocaldb; Database=SamuraiAppData;Trusted_Connection = True;";
+
+        //Data Source=DESKTOP-EJI49CF;Initial Catalog=AdventureWorks2012;Integrated Security=True;
         public DbSet<Samurai> Samurais { get; set; }
         public DbSet<Quote> Quote { get; set; }
         public DbSet<Battle> Battle { get; set; }
