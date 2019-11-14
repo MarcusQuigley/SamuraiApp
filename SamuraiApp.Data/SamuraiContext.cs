@@ -21,8 +21,8 @@ namespace SamuraiApp.Data
         {
             IServiceCollection serviceCollection = new ServiceCollection();
             serviceCollection.AddLogging(builder => builder.AddConsole()
-                                                    .AddFilter(DbLoggerCategory.Database.Command.Name,
-                                                                LogLevel.Information));
+                                                           .AddFilter(DbLoggerCategory.Database.Command.Name,
+                                                                      LogLevel.Information));
             return serviceCollection.BuildServiceProvider().GetService<ILoggerFactory>();
         }
 
